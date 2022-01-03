@@ -1,0 +1,164 @@
+
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8">
+	
+	<title>WEBSITE DEIGN</title>
+	
+	<link rel="stylesheet" type="text/css" href="Website.css" media="all" />
+	
+</head>
+
+<body>
+
+	<div id="hero">
+	
+	<div class="navber">
+	 
+	 <img src="logo.svg" class="logo" />
+	 
+	 <div class="user">
+	 
+	 
+	 <a href="#">
+
+	<span></span>
+
+	<span></span>
+
+	<span></span>
+
+	<span></span>
+
+	Explore
+
+	</a>
+	 
+	 
+	 <img src="user.jpg"/>
+	 
+	 </div>
+	 
+	</div>
+	
+	<div class="container">
+	
+	<div class="info">
+	
+	<h1>DISCOVER</h1>
+	
+	<p>lorem ipsum delorlorem ipsum delorlorem ipsum delorlorem ipsum delorlorem ipsum <br />delorlorem ipsum delordelorlorem ipsum delor</p>
+	
+	<input type="text" placeholder="Search" />
+	
+	</div>
+	
+	</div>
+	
+	
+	<div class="slider">
+	
+	
+	<img src="icon1.png" id="prev" />
+	
+	
+	
+	<div class="preview">
+	
+	<img src="bg1.jpg" class=" active thumbnail"/>
+	
+	<img src="bg2.jpg" class="thumbnail"/>
+	
+	<img src="bg3.jpg" class="thumbnail"/>
+	
+	<img src="bg4.jpg" class="thumbnail"/>
+	
+	<img src="bg5.jpg" class="thumbnail"/>
+	
+	<img src="bg6.jpg" class="thumbnail"/>
+	
+	
+	</div>
+	
+	<img src="icon2.png" id="next" />
+	
+	</div>
+	
+	</div>
+	
+	
+	
+	<script>
+	
+	var prev = document.getElementById("prev");
+	
+	var next = document.getElementById("next");
+	
+	var thumbnail = document.getElementsByClassName("thumbnail");
+	
+	var hero = document.getElementById("hero");
+	
+	var backgroundImg = new Array(
+	"bg1.jpg",
+	"bg2.jpg",
+	"bg3.jpg",
+	"bg4.jpg",
+	"bg5.jpg",
+	"bg6.jpg",
+	);
+     
+		
+	let i = 0;
+	
+	next.onclick = function(){
+		
+		if(i < 5){
+		
+		hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+	    
+		thumbnail[i+1].classList.add("active")
+		thumbnail[i].classList.remove("active")
+		
+		i++;
+		}
+		
+	}
+	
+	
+	prev.onclick = function(){
+		
+		if(i > 0){
+		
+		hero.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+	     
+		  
+		thumbnail[i-1].classList.add("active")
+		thumbnail[i].classList.remove("active")
+		 
+		 i--;
+		}
+		
+	}
+	
+	
+	</script>
+	
+	
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
